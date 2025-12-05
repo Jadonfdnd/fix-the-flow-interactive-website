@@ -1,0 +1,109 @@
+.action-header{
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+   
+
+} 
+
+.header-title {
+    flex-grow: 1; 
+    text-align: center; 
+    margin: 0 10px; 
+    color: white;
+
+}
+ 
+h1{
+    color: var(--white);
+}
+
+
+body {
+    background: var(--primary-color);
+    background-color: #f7f7f7;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 1fr 5fr 1fr;
+    padding-bottom: 60px; 
+    margin: 0;
+
+    
+}
+header{
+    background-color: var(--primary-color);
+    grid-row: 1;
+    position: static;
+    
+
+}
+.date-form {
+    display: grid;
+    /* Create two equal-width columns for the date inputs */
+    grid-template-columns: 1fr 1fr; 
+    /* Set some vertical spacing */
+    gap: 10px; 
+}
+
+.date-formn label,
+.date-form .text-input,
+.date-form .full-span {
+    grid-column: 1 / -1; /* Start at the first column line, end at the last */
+    width: 500px; /* Grid handles the sizing */
+}
+
+.date-form label:empty {
+    display: none;
+}
+
+.bottom-controls {
+    display: grid;
+    /* Define a structure that puts the checkbox far left and the button far right */
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    padding: 10px 0;
+}
+
+.checkbox-label {
+    grid-column: 1; /* Place in the first column (left) */
+}
+
+.create-button {
+    grid-column: 3; /* Place in the third column (right) */
+    justify-self: end; /* Ensures the button aligns to the right edge of its cell */
+    padding: 1rem;
+}
+
+nav{
+    background-color: var(--primary-color);
+    grid-row: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+
+} 
+ 
+nav a{
+    margin: 10px;
+
+}

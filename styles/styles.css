@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background: var(--primary-color);
+    background-color: #f7f7f7;
+    display: grid;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+header{
+    background-color: var(--primary-color);
+    grid-row: 1;
+    position: static;
+    height: 6em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+
+      /* color: white; */
+
+
+    & > a:first-child {
+        /* Plaatst de back-link in de eerste 'auto' kolom */
+        grid-column: 1/2;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    & form {
+        padding: 1.5em;
+
+        &:nth-of-type(1) { grid-column: 3 / 4; } 
+
+        /* Tomato Form - Column 4 */
+        &:nth-of-type(2) { grid-column: 4 / 5; }
+
+        /* Star Form - Column 5 */
+        &:nth-of-type(3) { grid-column: 5 / 6; }
+    }
+}
+
+button{
+    /* remove styling button so only svg shows */
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr; 
+
+    /* responsive */
+        @media (min-width: 678px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr; 
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1000px;
+        align-items: start;
+        overflow: hidden; /* FIX: Voorkomt dat de afbeelding overstroomt */
+    }
+
+    & img{
+        /* full width span van col 1 tot eind */
+        grid-column: 1/-1; 
+        grid-row: 1;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        @media (min-width: 678px) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 100%;
+            max-width: 100%;
+            height:auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.metadata-wrapper {
+    @media (min-width: 678px) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        display: flex;
+        flex-direction: column;
+        /* vert tags en datetime */
+
+        /* stukje tussen img en tags */
+        padding-left: 1.5em; 
+    }
+}
+
+
+.image-tags{
+    grid-column: 1/-1;
+    grid-row: 2;
+    list-style: none; /* Removes the default bullet points */
+    padding: 10px 0;
+    margin: 0;
+    display: flex; /* Allows list items to sit side-by-side */
+    gap: 10px;
+    justify-content: flex-start;
+
+    @media (min-width: 678px) {
+        flex-direction: column;
+        align-self: flex-end; /**/
+        margin-bottom: 1.53em;
+    }
+
+    & li {
+        /*pill shape */
+        border-radius: 50px; 
+        background-color: #e0e5e9; /* Light grey background */
+        color: #334e5e; /* Darker text color */
+        padding: 8px 15px; /* vertical and horizontal padding */
+    }
+}
+
+.photo-datetime{
+    @media (min-width: 678px) {
+        align-self: flex-end;
+        margin-top: auto;
+    }
+}
+
+footer{
+    justify-self: center;
+}
+
+nav{
+     background-color: var(--primary-color);
+/* positoming nav, make sure it stays at the bottom */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;  
+    left: 0;
+
+    /* layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    & a{
+        margin: 10px;
+    }
+}
+
+/* button animation js */
+.heart {
+    
+}
