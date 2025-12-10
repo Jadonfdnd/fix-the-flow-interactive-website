@@ -165,6 +165,54 @@ nav{
 }
 
 /* button animation js */
-.heart {
-    
+@keyframes heart-pop {
+	/* from normal size */
+	0%{
+		transform:scale(1);
+	}
+	/* to 125% size */
+	50%{
+		transform: scale(1.25);
+}
+	/* back to normal size */
+	100%{
+		transform:scale(1);
+	}
+}
+
+/* --- Heart Button Styling & Animation --- */
+
+/* 2. DEFAULT STATE: Solid White Fill (Unliked) */
+header form:nth-of-type(1) button svg {
+    /* Set size for better visibility, overriding any CSS block below if present */
+    width: 2em; 
+    height: 2em;
+    /* Set default heart state to solid white */
+    stroke: white; 
+    stroke-width: 1; 
+    fill: white; 
+    transition: fill 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+/* 3. LIKED STATE: When the parent button has the 'liked' class */
+
+/* Apply the animation to the SVG container (the whole icon) */
+header form:nth-of-type(1) button.liked svg {
+    /* Use the corrected keyframes name */
+    animation-name: heart-pop;
+	animation-duration: .25s;
+	animation-iteration-count:2;
+	animation-fill-mode: forwards;
+}
+
+/* Change the path style (fill it with red) */
+header form:nth-of-type(1) button.liked svg path {
+    fill: crimson; 
+    stroke: crimson; 
+}
+
+.liked {
+    animation-name: heart-pop;
+    animation-iteration-count: 2;
+    animation-duration: 1s;
 }
