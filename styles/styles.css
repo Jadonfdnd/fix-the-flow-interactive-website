@@ -182,19 +182,18 @@ nav{
 
 /* --- Heart Button Styling & Animation --- */
 
-/* 2. DEFAULT STATE: Solid White Fill (Unliked) */
+/* 2. DEFAULT STATE: Solid White Fill:Unliked */
 header form:nth-of-type(1) button svg {
-    /* Set size for better visibility, overriding any CSS block below if present */
     width: 2em; 
     height: 2em;
-    /* Set default heart state to solid white */
+    /* default heart state to white */
     stroke: white; 
     stroke-width: 1; 
     fill: white; 
     transition: fill 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
-/* 3. LIKED STATE: When the parent button has the 'liked' class */
+/* 3. LIKED STATE */
 
 /* Apply the animation to the SVG container (the whole icon) */
 header form:nth-of-type(1) button.liked svg {
@@ -205,7 +204,7 @@ header form:nth-of-type(1) button.liked svg {
 	animation-fill-mode: forwards;
 }
 
-/* Change the path style (fill it with red) */
+/* Change the path style fill with red */
 header form:nth-of-type(1) button.liked svg path {
     fill: crimson; 
     stroke: crimson; 
@@ -215,4 +214,28 @@ header form:nth-of-type(1) button.liked svg path {
     animation-name: heart-pop;
     animation-iteration-count: 2;
     animation-duration: 1s;
+}
+
+.like-button .heart-icon {
+  width: 24px;
+  height: 24px;
+  /* Add a transition for ALL properties, so the change is smooth */
+  transition: all 0.3s ease-in-out; 
+}
+/* hover for mouse makes it bigger */
+.like-button:hover {
+  
+  scale: (1.25); 
+  cursor: pointer; /* feedforward: muis wordt pointer */
+}
+
+.like-button .heart-icon path {
+  /* kleine animation */
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.like-button:hover .heart-icon path {
+  /*  Change the color to red */
+  fill: #ff0000; /* Red fill color */
+  stroke: #ff0000; /* Red outline color */
 }
