@@ -184,8 +184,8 @@ nav{
 
 /* 2. DEFAULT STATE: Solid White Fill:Unliked */
 header form:nth-of-type(1) button svg {
-    width: 2em; 
-    height: 2em;
+    width: 2rem; 
+    height: 2rem;
     /* default heart state to white */
     stroke: white; 
     stroke-width: 1; 
@@ -206,8 +206,8 @@ header form:nth-of-type(1) button.liked svg {
 
 /* Change the path style fill with red */
 header form:nth-of-type(1) button.liked svg path {
-    fill: crimson; 
-    stroke: crimson; 
+    fill: #00E53D; 
+    stroke: #00E53D; 
 }
 
 .liked {
@@ -236,6 +236,15 @@ header form:nth-of-type(1) button.liked svg path {
 
 .like-button:hover .heart-icon path {
   /*  Change the color to red */
-  fill: #ff0000; /* Red fill color */
-  stroke: #ff0000; /* Red outline color */
+  fill: #00E53D; /* green fill color */
+  stroke: #00E53D; /* green outline color */
+}
+
+/* tomato svg styling*/
+
+.tomato-button svg {
+
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; 
 }
