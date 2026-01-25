@@ -1,22 +1,41 @@
+**SnappThis - Detailpagina Interactie**
+Voor dit project heb ik gewerkt aan de detailpagina van SnappThis. De focus lag op het creëren van een vloeiende gebruikerservaring door middel van micro-interacties en een responsive design.
 
-Ontwerp en maak een interactieve website voor een opdrachtgever.
+**Beschrijving**
+Het ontwerpprobleem was dat de interactie bij het liken van een foto vaak saai aanvoelt. De oplossing die ik heb gemaakt, is een interactieve Heart-knop met directe feedback.
 
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/INSTRUCTIONS.md)
+De Interactie
+Wanneer een gebruiker op het hart-icoon klikt, verandert deze van kleur (wit naar groen) en voert een subtiele 'pop'-animatie uit.
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Feedback: De kleurverandering en de heart-pop animatie laten de gebruiker direct weten dat de actie is geslaagd.
 
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Feedforward: Bij een hover over de button schaalt het icoon licht op en verandert de cursor in een pointer, wat aangeeft dat het element klikbaar is.
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+<img width="435" height="316" alt="image" src="https://github.com/user-attachments/assets/22c63797-6ddb-43ea-b640-703808be35bd" />
+<img width="159" height="101" alt="image" src="https://github.com/user-attachments/assets/f3930d9b-4e88-4e2e-aa75-9c92c9e68581" />
 
-## Bronnen
 
-## Licentie
 
-This project is licensed under the terms of the [MIT license](./LICENSE).
 
+
+**Kenmerken**
+De pagina is opgebouwd met een sterke focus op  responsiveness.
+
+**HTML Structuur**
+De basis bestaat uit een header, main en nav.
+
+In de Header zijn de actieknoppen (zoals de Heart-button) geplaatst binnen form elementen voor semantiek.
+
+De Main sectie bevat de afbeelding en een metadata-wrapper voor tags en de datum.
+
+De Nav werkt als een tab bar onderaan het scherm, zoals gebruikelijk in mobiele apps.
+
+Belangrijke CSS
+Ik heb gebruik gemaakt van CSS Grid voor de layout van zowel de header als de main content.
+
+Responsiveness: Met Media Queries verandert de layout van een verticale mobiele weergave naar een split-screen weergave op schermen breder dan 678px.
+
+Animaties: De heart-pop keyframes zorgen voor een schaaleffect:
+
+**JavaScript Functionaliteit**
+In het bestand scripts/test.js  wordt de interactie afgehandeld. Wanneer de gebruiker op de .like-button klikt, wordt de class .liked toegevoegd aan het SVG-element. Dit triggert de CSS-animatie en de kleurverandering naar groen, dus het 3 stappenplan.
